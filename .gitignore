@@ -140,6 +140,7 @@ dmypy.json
 *.pkl
 *.graphml
 *.csv
+*/data
 
 cache/
 /examples/data

@@ -11,13 +11,15 @@ authors = [
 description = "GNN in VRP tasks"
 readme = "README.rst"
 requires-python = ">=3.10"
-license = { file = "LICENCE.md" }
+license = { file = "LICENCE" }
 
 dependencies = [
     "blocksnet==0.0.5",
     "geopandas==0.13.0",
     "pandas==1.5.3",
     "networkx==3.1",
+    "osmnx==1.6.0",
+    "numpy==1.23.5",
 ]
 
 classifiers = [
@@ -33,6 +35,7 @@ include = ["givt*"]
 
 [project.optional-dependencies]
 dev = [
+    "ipykernel==6.29.0",
     "black[jupyter]>=22",
     "isort>=5.6",
     "pylint>=2.17",
