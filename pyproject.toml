@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "givt"
+version = "0.0.5"
+authors = [
+    # { name = "", email = "" }, # TODO add authors
+]
+description = "GNN in VRP tasks"
+readme = "README.rst"
+requires-python = ">=3.10"
+license = { file = "LICENCE" }
+
+dependencies = [
+    "blocksnet==0.0.5",
+    "geopandas==0.13.0",
+    "pandas==1.5.3",
+    "networkx==3.1",
+    "osmnx==1.6.0",
+    "numpy==1.23.5",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache-2.0 license",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+]
+
+[tool.setuptools.packages.find]
+include = ["givt*"]
+
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel==6.29.0",
+    "black[jupyter]>=22",
+    "isort>=5.6",
+    "pylint>=2.17",
+    "pre-commit>=3.1",
+    "sphinx==6.2.1",
+    "sphinx-book-theme==1.0.1",
+    "numpydoc==1.5.0",
+    "pytest==7.4.3",
+    "pytest-cov==4.1.0"
+]
+
+
+[project.urls]
+"Repository" = "https://github.com/NikitaNikolaevich/GNN-in-WRP-tasks"
+"Bug Tracker" = "https://github.com/NikitaNikolaevich/GNN-in-WRP-tasks/issues"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+[tool.pylint.format]
+max-line-length = 120
+expected-line-ending-format = "LF"
+
+[tool.pylint.main]
+extension-pkg-allow-list = ["pydantic"]
+
+[tool.pycodestyle]
+max-line-length = 120
+
+
+[tool.isort]
+lines_after_imports = 2
+multi_line_output = 3
+line_length = 120
+include_trailing_comma = true
