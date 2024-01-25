@@ -15,6 +15,7 @@ How to install and develop:
 2. Install dev dependencies:
 
    ::
+      
       make install-dev
 
 3. Select ``.venv`` kernel in ``.ipynb`` file.
