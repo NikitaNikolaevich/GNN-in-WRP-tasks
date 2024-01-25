@@ -1,4 +1,4 @@
-givt -- GNN in VRP tasks 
+givt - GNN in VRP tasks 
 ========================
 
 |Documentation Status| |PythonVersion| |Black| |Readme_ru|
